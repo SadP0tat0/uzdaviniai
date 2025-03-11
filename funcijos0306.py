@@ -269,9 +269,73 @@ print(prime_array)
 # o paskutinis masyvas, kuris generuojamas pagal tokią pat salygą kaip ir pirmasis masyvas.
 # Viską pakartokite atsitiktinį nuo 10 iki 30  kiekį kartų. Paskutinio masyvo paskutinis elementas yra lygus 0;
 # 7. Suskaičiuokite šešto uždavinio elementų, kurie nėra masyvai, sumą. Skaičiuoti reikia visuose masyvuose ir submasyvuose.
-def generate():
-    arr1 = [random.randint(0,10) for i in range(random.randint(10,20)-1)]
-    arr2 = [random.randint(0,10) for i in range(random.randint(10,20)-1)]
-    arr1.append(arr2)
-    return arr1
+print('======S6======')
+
+
+def print_random_numbers():
+    length = random.randint(10, 20)
+    random_numbers = [random.randint(0, 10) for _ in range(length)]
+    print(random_numbers)
+print_random_numbers()
 print()
+def generate_and_insert_array():
+    length = random.randint(10, 20)
+
+    random_array = [random.randint(0, 10) for _ in range(length)]
+
+    random_array += [random_array[:]]
+
+    return random_array
+
+print(generate_and_insert_array())
+print()
+random_times = random.randint(10, 30)
+
+for _ in range(random_times):
+    generate_and_insert_array()
+print(generate_and_insert_array())
+def print_random_numbers():
+    length = random.randint(10, 20)
+    random_numbers = [random.randint(0, 10) for i in range(length)]
+    print(random_numbers)
+
+print_random_numbers()
+#
+# def generate_and_insert_array():
+#     length = random.randint(10, 20)
+#     random_array = [random.randint(0, 10) for i in range(length)]
+#     random_array += [random_array[:]]
+#     return random_array
+#
+# print(generate_and_insert_array())
+# print('----------------')
+# random_times = random.randint(10, 30)
+# for i in range(random_times):
+#     print(generate_and_insert_array())
+#
+# def print_random_numbers():
+#     length = random.randint(10, 20)
+#     random_numbers = [random.randint(0, 10) for _ in range(length)]
+#     print(random_numbers)
+#
+# print_random_numbers()
+#
+# def generate_and_insert_array():
+#     length = random.randint(10, 20)
+#     random_array = [random.randint(0, 10) for _ in range(length)]
+#     random_array += random_array[:]
+#     return random_array
+#
+# print(generate_and_insert_array())
+#
+# random_times = random.randint(10, 30)
+# arrays = []
+# for _ in range(random_times):
+#     arrays.append(generate_and_insert_array())
+#
+# arrays[-1][-1] = 0
+#
+# for array in arrays:
+#     print(array)
+
+print('=======S7========')
